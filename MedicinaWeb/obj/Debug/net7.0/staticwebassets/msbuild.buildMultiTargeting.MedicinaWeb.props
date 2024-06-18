@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\MedicinaWeb.props" />
+</Project>
