@@ -99,3 +99,22 @@ a, .btn-link {
     .loading-progress-text:after {
         content: var(--blazor-load-percentage-text, "Loading");
     }
+
+.mud-container-maxwidth-lg {
+    max-width:100%
+}
+.texto-justificado {
+    text-align: justify;
+}
+body {
+    font-family: 'Muli', sans-serif;
+    font-weight: 200;
+    font-style: italic;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+.my-justified-text {
+    text-align: justify;
+}

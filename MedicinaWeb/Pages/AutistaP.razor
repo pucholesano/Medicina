@@ -1,0 +1,36 @@
+﻿@page "/autistaP"
+<PageTitle>Prevalencia</PageTitle>
+<MudContainer MaxWidth="MaxWidth.ExtraExtraLarge" Class="my-container">
+
+
+    <MudText Typo="Typo.h2" Align="Align.Center" Class="my-title">
+        PREVALENCIA
+    </MudText>
+
+</MudContainer>
+<MudContainer MaxWidth="MaxWidth.Medium" Class="my-container">
+    <MudCarousel MaxWidth="ExtraLarge" ItemsSource="@qs" @bind-SelectedIndex="selectedIndex" Style="height:400px;" AutoCycle="true">
+        <ItemTemplate>
+            <div class="d-flex justify-center" style="height:100%">
+                <img src="@context" alt="Imagen del carrusel" class="carousel-image" />
+            </div>
+        </ItemTemplate>
+    </MudCarousel>
+</MudContainer>
+<MudText Typo="Typo.body1 " Align="Align.Center" Class=" my-justified-text">
+    Publicaciones muestran el aumento de este indicador desde 4-5/10.000 en los años sesenta hasta 260/10.000 o más en las primeras décadas del siglo XXI. Algunas investigaciones 
+    epidemiológicas que fueron realizadas en las últimas décadas han mostrado un aumento significativo de la prevalencia de TEA, que ha alcanzado en los últimos años hasta 1-2% de los niños. 
+    (André et al., 2020)
+</MudText>
+<MudText Typo="Typo.body1 " Align="Align.Center" Class=" my-justified-text">
+    En el año 2016, el  Ministerio  de  Salud  Pública  (MSP)  mediante  la  Dirección  Nacional  de  Discapacidades,  reportó  1266  personas  diagnosticadas  dentro  de  los  TEA  
+    (254  autismo  atípico; 792 autismo de la niñez: 205 Asperger y 15 síndrome de Rett).(López-Ruiz et al., 2023)
+</MudText>
+
+@code {
+    private int selectedIndex = 0;
+    private IList<string> qs = new List<string>
+    {
+        "Imagenes/ap1.jpg", "Imagenes/ap2.jpg", "Imagenes/ap3.jpg", "Imagenes/ap4.jpg"
+    };
+}

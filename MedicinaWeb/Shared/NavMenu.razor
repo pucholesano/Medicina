@@ -1,35 +1,175 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
+﻿<div class="top-row ps-3 navbar navbar-dark  ">
     <div class="container-fluid">
-        <a class="navbar-brand" href="">MedicinaWeb</a>
-        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        <a class="navbar-brand" href="" @onclick="ToggleNavMenu">
+            <MudImage src="Imagenes/logo.ico" alt="Logo de San Miguel" style="max-height: 40px;" />
+            San Miguel
+        </a>
+        <!-- Aquí puedes eliminar el botón de navegación si no lo necesitas -->
     </div>
 </div>
-
-<div class="@NavMenuCssClass nav-scrollable" @onclick="ToggleNavMenu">
+<div class="@NavMenuCssClass nav-scrollable " @onclick="ToggleNavMenu">
     <nav class="flex-column">
+        <!-- Inicio -->
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="oi oi-home" aria-hidden="true"></span> Home
+                <MudIcon Icon="@Icons.Material.Filled.Home" Class="oi oi-home" aria-hidden="true" />
+                <span class="ml-2">Inicio</span>
             </NavLink>
         </div>
+        <!-- Tema 1 -->
         <div class="nav-item px-3">
-            <NavLink class="nav-link" href="counter">
-                <span class="oi oi-plus" aria-hidden="true"></span> Counter
+            <NavLink class="nav-link" href="" @onclick="()=>expandirSubMenu=!expandirSubMenu">
+                <MudIcon Icon="@Icons.Material.Filled.SentimentNeutral" Class="oi oi-check" aria-hidden="true" />
+                <span class="ml-2">Síndrome espectro autista  </span>
             </NavLink>
+            <!-- Subtemas de Tema 1 -->
+            @if (expandirSubMenu)
+            {
+                <div class="nav-submenu">
+                    <!-- Sub tema 1.1 -->
+                    <div class="nav-item px-6">
+                        <NavLink class="nav-link" href="autistaQ">
+                            <MudIcon Icon="@Icons.Material.Filled.Info" Class="oi oi-medical-cross" aria-hidden="true" />
+                            <span class="ml-2">Que es</span>
+                        </NavLink>
+                    </div>
+                    <!-- Sub tema 1.2 -->
+                    <div class="nav-item px-6">
+                        <NavLink class="nav-link" href="autistaP">
+                            <MudIcon Icon="@Icons.Material.Filled.Article" Class="oi oi-info" aria-hidden="true" />
+                            <span class="ml-2">Prevalencia</span>
+                        </NavLink>
+                    </div>
+                    <div class="nav-item px-6">
+                        <NavLink class="nav-link" href="autistaM">
+                            <MudIcon Icon="@Icons.Material.Filled.Assistant" Class="oi oi-info" aria-hidden="true" />
+                            <span class="ml-2">Manejo del paciente</span>
+                        </NavLink>
+                    </div>
+                </div>
+            
+            }
+            
         </div>
+
+        <!-- Tema 2 -->
         <div class="nav-item px-3">
-            <NavLink class="nav-link" href="fetchdata">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch data
+            <NavLink class="nav-link" href="autistaP" @onclick="()=>expandirSubMenu2=!expandirSubMenu2">
+                <MudIcon Icon="@Icons.Material.Filled.SentimentNeutral" Class="oi oi-check" aria-hidden="true" />
+                <span class="ml-2">Discapacidad intelectual  </span>
             </NavLink>
+            <!-- Subtemas de Tema 1 -->
+            @if (expandirSubMenu2)
+            {
+                <div class="nav-submenu">
+                    <!-- Sub tema 1.1 -->
+                    <div class="nav-item px-6">
+                        <NavLink class="nav-link" href="autistaQ">
+                            <MudIcon Icon="@Icons.Material.Filled.Info" Class="oi oi-medical-cross" aria-hidden="true" />
+                            <span class="ml-2">Que es</span>
+                        </NavLink>
+                    </div>
+                    <!-- Sub tema 1.2 -->
+                    <div class="nav-item px-6">
+                        <NavLink class="nav-link" href="autistaM">
+                            <MudIcon Icon="@Icons.Material.Filled.Article" Class="oi oi-info" aria-hidden="true" />
+                            <span class="ml-2">Prevalencia</span>
+                        </NavLink>
+                    </div>
+                    <div class="nav-item px-6">
+                        <NavLink class="nav-link" href="autistaM">
+                            <MudIcon Icon="@Icons.Material.Filled.Assistant" Class="oi oi-info" aria-hidden="true" />
+                            <span class="ml-2">Manejo del paciente</span>
+                        </NavLink>
+                    </div>
+                </div>
+            
+            }
+            
         </div>
+
+        <!-- Tema 3 -->
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="" @onclick="()=>expandirSubMenu3=!expandirSubMenu3">
+                <MudIcon Icon="@Icons.Material.Filled.SentimentNeutral" Class="oi oi-check" aria-hidden="true" />
+                <span class="ml-2">Paralisis cerebral  </span>
+            </NavLink>
+            <!-- Subtemas de Tema 1 -->
+            @if (expandirSubMenu3)
+            {
+                <div class="nav-submenu">
+                    <!-- Sub tema 1.1 -->
+                    <div class="nav-item px-6">
+                        <NavLink class="nav-link" href="autistaQ">
+                            <MudIcon Icon="@Icons.Material.Filled.Info" Class="oi oi-medical-cross" aria-hidden="true" />
+                            <span class="ml-2">Que es</span>
+                        </NavLink>
+                    </div>
+                    <!-- Sub tema 1.2 -->
+                    <div class="nav-item px-6">
+                        <NavLink class="nav-link" href="autistaM">
+                            <MudIcon Icon="@Icons.Material.Filled.Article" Class="oi oi-info" aria-hidden="true" />
+                            <span class="ml-2">Prevalencia</span>
+                        </NavLink>
+                    </div>
+                    <div class="nav-item px-6">
+                        <NavLink class="nav-link" href="autistaM">
+                            <MudIcon Icon="@Icons.Material.Filled.Assistant" Class="oi oi-info" aria-hidden="true" />
+                            <span class="ml-2">Manejo del paciente</span>
+                        </NavLink>
+                    </div>
+                </div>
+
+            }
+
+        </div>
+
+
+        <!-- Tema 4 -->
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="" @onclick="()=>expandirSubMenu4=!expandirSubMenu4">
+                <MudIcon Icon="@Icons.Material.Filled.SentimentNeutral" Class="oi oi-check" aria-hidden="true" />
+                <span class="ml-2">Sindrome de down </span>
+            </NavLink>
+            <!-- Subtemas de Tema 1 -->
+            @if (expandirSubMenu4)
+            {
+                <div class="nav-submenu">
+                    <!-- Sub tema 1.1 -->
+                    <div class="nav-item px-6">
+                        <NavLink class="nav-link" href="autistaQ">
+                            <MudIcon Icon="@Icons.Material.Filled.Info" Class="oi oi-medical-cross" aria-hidden="true" />
+                            <span class="ml-2">Que es</span>
+                        </NavLink>
+                    </div>
+                    <!-- Sub tema 1.2 -->
+                    <div class="nav-item px-6">
+                        <NavLink class="nav-link" href="autistaM">
+                            <MudIcon Icon="@Icons.Material.Filled.Article" Class="oi oi-info" aria-hidden="true" />
+                            <span class="ml-2">Prevalencia</span>
+                        </NavLink>
+                    </div>
+                    <div class="nav-item px-6">
+                        <NavLink class="nav-link" href="autistaM">
+                            <MudIcon Icon="@Icons.Material.Filled.Assistant" Class="oi oi-info" aria-hidden="true" />
+                            <span class="ml-2">Manejo del paciente</span>
+                        </NavLink>
+                    </div>
+                </div>
+
+            }
+
+        </div>
+
     </nav>
 </div>
 
 @code {
     private bool collapseNavMenu = true;
-
+    private bool expandirSubMenu;
+    private bool expandirSubMenu2;
+    private bool expandirSubMenu3;
+    private bool expandirSubMenu4;
     private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
 
     private void ToggleNavMenu()

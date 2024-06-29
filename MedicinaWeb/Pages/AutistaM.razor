@@ -1,0 +1,41 @@
+﻿@page "/autistaM"
+@using MudBlazor
+<PageTitle>Manejo del paciente</PageTitle>
+<MudContainer MaxWidth="MaxWidth.ExtraExtraLarge" Class="my-container">
+
+
+    <MudText Typo="Typo.h2" Align="Align.Center" Class="my-title">
+        MANEJO DEL PACIENTE
+    </MudText>
+
+</MudContainer>
+<MudContainer MaxWidth="MaxWidth.Medium" Class="my-container">
+    <MudCarousel MaxWidth="ExtraLarge" ItemsSource="@qs" @bind-SelectedIndex="selectedIndex" Style="height:400px;" AutoCycle="true">
+        <ItemTemplate>
+            <div class="d-flex justify-center" style="height:100%">
+                <img src="@context" alt="Imagen del carrusel" class="carousel-image" />
+            </div>
+        </ItemTemplate>
+    </MudCarousel>
+</MudContainer>
+<MudText Typo="Typo.body1 " Align="Align.Center" Class=" my-justified-text">
+    El entrenamiento como el manejo del comportamiento usan refuerzos positivos para mejorar la conducta. También usan entrenamiento de las habilidades sociales para mejorar la comunicación. 
+    El programa específico debería elegirse según las necesidades del niño. A los niños autistas altamente funcionales se los puede inscribir en clases y guarderías comunes; observar la conducta 
+    de otros niños que se desarrollan normalmente puede darles a los niños autistas ejemplos a seguir. Pero otros niños reciben demasiado estímulo en un aula común y se desempeñan mejor en 
+    entornos más pequeños y altamente estructurados. (CIGNA, 2021)
+</MudText>
+<MudContainer MaxWidth="MaxWidth.Medium" Class="d-flex justify-center align-center" Style="padding: 20px;">
+    <div style="width:560px; height:315px">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/HV7k6W6luTE?si=LKlCUEsxZizEYM9v" title="YouTube video player" frameborder="0" allow="accelerometer; 
+autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+</MudContainer>
+
+
+@code {
+    private int selectedIndex = 0;
+    private IList<string> qs = new List<string>
+    {
+        "Imagenes/ap1.jpg", "Imagenes/ap2.jpg", "Imagenes/ap3.jpg", "Imagenes/ap4.jpg"
+    };
+}

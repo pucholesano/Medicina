@@ -1,0 +1,36 @@
+﻿@page "/autistaQ"
+<PageTitle>Que es</PageTitle>
+<MudContainer MaxWidth="MaxWidth.ExtraExtraLarge" Class="my-container">
+
+
+    <MudText Typo="Typo.h2" Align="Align.Center" Class="my-title">
+        ¿QUE ES?
+    </MudText>
+
+</MudContainer>
+<MudContainer MaxWidth="MaxWidth.Medium" Class="my-container">
+    <MudCarousel MaxWidth="ExtraLarge" ItemsSource="@qs" @bind-SelectedIndex="selectedIndex" Style="height:400px;" AutoCycle="true">
+        <ItemTemplate>
+            <div class="d-flex justify-center" style="height:100%">
+                <img src="@context" alt="Imagen del carrusel" class="carousel-image" />
+            </div>
+        </ItemTemplate>
+    </MudCarousel>
+</MudContainer>
+<MudText Typo="Typo.body1 " Align="Align.Center" Class=" my-justified-text">
+    Es un trastorno del neurodesarrollo que es caracterizado por dificultades en la comunicación y en la interacción social, 
+    así como en la flexibilidad del pensamiento y de la conducta de quien lo presenta. (André et al., 2020)
+</MudText>
+<MudText Typo="Typo.body1 " Align="Align.Center" Class=" my-justified-text">
+    Donde se ve afectado la interacción social, en la comunicación y en el comportamiento, existen tres áreas determinantes, una es la socialización
+    (en la que existe una interacción social pobre), otra es la comunicación (tano a nivel verbal como a nivel no verbal) y la otra es a nivel del comportamiento 
+    (en la que existen conductas que se repiten constantemente y existe una disminución en los intereses). Haga clic o pulse aquí para escribir texto.
+</MudText>
+
+@code {
+    private int selectedIndex = 0;
+    private IList<string> qs = new List<string>
+    {
+        "Imagenes/aq1.jpg", "Imagenes/aq2.jpg", "Imagenes/aq3.jpg", "Imagenes/aq4.jpg"
+    };
+}

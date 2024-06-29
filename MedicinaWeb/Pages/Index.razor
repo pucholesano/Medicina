@@ -1,9 +1,197 @@
 ﻿@page "/"
 
 <PageTitle>Index</PageTitle>
+<MudContainer MaxWidth="MaxWidth.ExtraExtraLarge" Class="my-container">
 
-<h1>Hello, world!</h1>
 
-Welcome to your new app.
+    <MudText Typo="Typo.h2" Align="Align.Center" Class="my-title">
+        FUNDACIÓN DE NIÑOS ESPECIALES “SAN MIGUEL”
+    </MudText>
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+</MudContainer>
+<MudContainer MaxWidth="MaxWidth.Medium" Class="my-container">
+    <MudCarousel MaxWidth="ExtraLarge" ItemsSource="@qs" @bind-SelectedIndex="selectedIndex" Style="height:400px;" AutoCycle="true">
+        <ItemTemplate>
+            <div class="d-flex justify-center" style="height:100%">
+                <img src="@context" alt="Imagen del carrusel" class="carousel-image" />
+             </div>
+        </ItemTemplate>
+    </MudCarousel>
+</MudContainer>
+<MudText Typo="Typo.body1 " Align="Align.Center" Class=" my-justified-text">
+        La Fundación de Niños Especiales “San Miguel” es una institución sin fines de lucro que está orientada al servicio social, a la colectividad en general, brindando servicios de: Atención neurológica, Psicológica, Hipoterapia, Hidroterapia, Terapia física en niños y adultos, Terapia ocupacional, preocupándose en particular por las personas con capacidades especiales, facilitando así el desarrollo de la autonomía personal y la integración a la sociedad de estas personas. Además, ofrece a la población en general: Terapia de lenguaje, Terapia multisensorial, Estimulación temprana y Refuerzo escolar.
+    </MudText>
+
+<MudGrid Class="mt-6">
+        <MudItem xs="12" sm="7">
+            <MudText Typo="Typo.h4" Align="Align.Start" >
+                MISIÓN
+            </MudText>
+        <MudText Align="Align.Start" Class=" my-justified-text">
+                La Fundación de Niños Especiales San Miguel, ubicada en la ciudad de Salcedo, es una institución admirable que brinda apoyo y cuidado excepcionales, su enfoque en el bienestar integral y el desarrollo de cada niño es notable. A través de programas educativos, terapia y actividades recreativas, la fundación se dedica a mejorar la calidad de vida de estos pequeños. Su compromiso con la inclusión, ya que es una Institución de labor social sin fines de lucro, que está al servicio de niños con capacidades especiales, adulto mayor y para toda la ciudadanía que requiera de los servicios que brinda la Institución. Cuenta con los servicios hacia el público de rehabilitación física, estimulación temprana, hidroterapia y psicología.
+            </MudText>
+        </MudItem>
+        <MudItem xs="12" sm="5" Class="d-flex justify-left">
+            <MudImage Src="@currentImageMs" Alt="Descripción de la imagen" Class="@(fadeMs? "my-image fade-in" : "my-image")" />
+        </MudItem>
+    </MudGrid>
+
+<MudGrid Class="mt-6">
+
+        <MudItem xs="12" sm="5" Class="d-flex justify-end">
+            <MudImage Src="@currentImageVs" Alt="Descripción de la imagen" Class="@(fadeVs ? "my-image fade-in" : "my-image")" />
+        </MudItem>
+        <MudItem xs="12" sm="7">
+        <MudText Typo="Typo.h4">
+                VISIÓN
+            </MudText>
+        <MudText Class="my-justified-text">
+            Nuestra visión es ser un referente a nivel nacional e internacional en la atención integral y el desarrollo de niños con capacidades especiales, promoviendo una sociedad inclusiva y equitativa. Aspiramos a crear un entorno donde cada niño, adulto mayor y ciudadano que acuda a nuestra institución reciba el apoyo necesario para alcanzar su máximo potencial. Nos comprometemos a expandir y mejorar continuamente nuestros servicios de rehabilitación física, estimulación temprana, hidroterapia y psicología, y a ser un modelo de excelencia en la labor social sin fines de lucro. Trabajamos para que cada persona bajo nuestro cuidado se sienta valorada, respetada y capaz de contribuir plenamente a la sociedad.
+            </MudText>
+        </MudItem>  
+    </MudGrid>
+
+<MudGrid Class="mt-6">
+        <MudItem xs="12" sm="7">
+        <MudText Typo="Typo.h4" Align="Align.Start">
+                ENFERMEDADES QUE EXISTEN EN EL CENTRO
+            </MudText>
+        <MudText Align="Align.Start" Class="my-justified-text">
+            En el país, el 2.67% de la población tiene alguna discapacidad, según el Consejo Nacional de Discapacidades (CONADIS), hasta el 2021. Por ello, existen varios centros que ayudan a
+            personas con discapacidad intelectual. Estos centros, gracias a la gestión de diversos organismos, están equipados para desarrollar la personalidad, aumentar la autonomía, superar
+            dificultades de aprendizaje y mejorar la integración familiar y escolar.
+            </MudText>
+           
+        </MudItem>
+        <MudItem xs="12" sm="5" Class="d-flex justify-left">
+
+        </MudItem>
+    </MudGrid>
+
+<MudGrid Class="mt-2">
+    <MudItem xs="12" sm="7">
+        <MudText Align="Align.Start" Class="my-justified-text">
+            En el cantón San Miguel de Salcedo, en la provincia de Cotopaxi, hay aproximadamente 200 niños y 30 adultos con diversas discapacidades, la mayoría de los cuales viven en zonas rurales.
+            Por esta razón, los centros de apoyo están mejorando sus servicios para abarcar toda la provincia. La Fundación de Niños Especiales San Miguel de Salcedo atiende a 11 niños con
+            discapacidades intelectuales, 200 niños con diversas discapacidades y 30 adultos. Se han logrado resultados importantes, sensibilizando y movilizando a actores locales en favor de la
+            inclusión desde una perspectiva de igualdad de oportunidades. La fundación lucha por mejorar las condiciones y recuperación de los niños, buscando colaboración de instituciones y
+            profesionales. Desarrollan actividades especializadas para la rehabilitación integral y asistencia permanente, formando capacidades y apoyando el proceso de enseñanza y aprendizaje
+            (Raura Chicaiza & Villamarin Tello, 2018)
+        </MudText>
+        <MudText Align="Align.Start" Class="mt-2">
+            Las enfermedades más prevalentes atendidas en el centro son:
+        </MudText>
+        <MudText Align="Align.Start" Class="mt-2">
+            •	Síndrome del Espectro Autista
+        </MudText>
+        <MudText Align="Align.Start" Class="mt-2">
+            •	Discapacidad Intelectual
+        </MudText>
+        <MudText Align="Align.Start" Class="mt-2">
+            •	Parálisis cerebral
+        </MudText>
+        <MudText Align="Align.Start" Class="mt-2">
+            •	Síndrome de Down
+        </MudText>
+    </MudItem>
+    <MudItem xs="12" sm="5" Class="justify-left">
+        <MudImage Src="Imagenes/ef1.png" Alt="Descripción de la imagen" />
+    </MudItem>
+</MudGrid>
+
+<MudGrid Class="mt-6">
+
+    <MudItem xs="12" sm="5" Class="d-flex justify-end">
+        <MudImage Src="Imagenes/ub1.jpg" Alt="Descripción de la imagen"  />
+    </MudItem>
+    <MudItem xs="12" sm="7">
+        <MudText Typo="Typo.h4">
+            UBICACIÓN
+        </MudText>
+        <MudText Class="mt-2">
+            Cantón Salcedo
+            Provincia Cotopaxi
+        </MudText>
+        <MudText Class="mt-2">
+            Fundación San Miguel, XC45+MV9, Salcedo
+        </MudText>
+        <MudText Class="mt-2" Style="text-decoration-color:initial" >
+            <MudLink Href="https://maps.app.goo.gl/fWDh3fJz81jwxdoy6" Target="_blank">
+                        Haga clic aquí para abrir con Google Maps
+                    </MudLink>
+@*             <A HREF=""> Google Maps  &lt;&#61; aqui</A> *@
+        </MudText>
+        
+    </MudItem>
+</MudGrid>
+@* </MudContainer> *@
+
+@code {
+    private IList<string> qs = new List<string>
+    {
+        "Imagenes/qs1.jpg", "Imagenes/qs2.jpg", "Imagenes/qs3.jpg", "Imagenes/qs4.jpg"
+    };
+
+
+    private int selectedIndex = 0;
+    private string[] images = { "Imagenes/imagen1.jpg", "Imagenes/imagen2.jpg", "Imagenes/imagen3.jpg" };
+    private string[] ms = { "Imagenes/ms1.jpg", "Imagenes/ms2.jpg" };
+    private string[] vs = { "Imagenes/vs1.jpg", "Imagenes/vs2.jpg" };
+    private int currentIndex = 0;
+    private string currentImage;
+    private Timer timer;
+    private bool fade = false;
+
+    private int currentIndexMs = 0;
+    private string currentImageMs;
+    private Timer timerMs;
+    private bool fadeMs = false;
+
+    private int currentIndexVs = 0;
+    private string currentImageVs;
+    private Timer timerVs;
+    private bool fadeVs = false;
+   
+
+    protected override void OnInitialized()
+    {
+        currentImage = images[currentIndex];
+        timer = new Timer(ChangeImage, null, 0, 6000);
+        timerMs = new Timer(ChangeImageMs, null, 0, 6000);
+        timerVs = new Timer(ChangeImageVs, null, 0, 6000);
+    }
+
+    private async void ChangeImage(object state)
+    {
+        fade = false; // Empezar desvanecimiento
+        StateHasChanged();
+        await Task.Delay(500); // Esperar el tiempo de desvanecimiento (500 ms)
+
+        currentIndex = (currentIndex + 1) % images.Length;
+        currentImage = images[currentIndex];
+        fade = true; // Mostrar la nueva imagen
+        StateHasChanged();
+    }
+    private async void ChangeImageMs(object state)
+    {
+        fadeMs = false; // Empezar desvanecimiento
+        StateHasChanged();
+        await Task.Delay(500); // Esperar el tiempo de desvanecimiento (500 ms)
+
+        currentIndexMs = (currentIndexMs + 1) % ms.Length;
+        currentImageMs = ms[currentIndexMs];
+        fadeMs = true; // Mostrar la nueva imagen
+        StateHasChanged();
+    }
+    private async void ChangeImageVs(object state)
+    {
+        fadeVs = false; // Empezar desvanecimiento
+        StateHasChanged();
+        await Task.Delay(500); // Esperar el tiempo de desvanecimiento (500 ms)
+
+        currentIndexVs = (currentIndexVs + 1) % vs.Length;
+        currentImageVs = vs[currentIndexVs];
+        fadeVs = true; // Mostrar la nueva imagen
+        StateHasChanged();
+    }
+}

@@ -1,0 +1,89 @@
+﻿/*.my-container {
+    margin-top: 10px;
+}
+
+.my-title {
+    margin-bottom: 20px;
+}
+
+.my-content {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+.image-container {
+    position: relative;
+    width: 100%;
+}
+
+.my-image {
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    display: block;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+}
+*/
+
+.ml-2 {
+    margin-left: 8px;
+}
+
+.nav-scrollable {
+    overflow-y: auto;
+}
+.mud-container {
+    padding: 16px;
+}
+
+.img-right {
+    max-width: 100%;
+    height: auto;
+}
+
+.img-left {
+    max-width: 100%;
+    height: auto;
+}
+.my-image.fade-in {
+    opacity: 1;
+}
+.my-container {
+    margin-top: 20px;
+}
+
+.my-title {
+    margin-bottom: 20px;
+}
+
+.my-content {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.my-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.carousel-container {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.full-width-carousel {
+    width: 100%;
+}
+
+.carousel-image {
+    width: 100%;
+    height: auto;
+}
+body {
+}
+.my-justified-text {
+    text-align: justify;
+}
