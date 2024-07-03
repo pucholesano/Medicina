@@ -1,0 +1,233 @@
+﻿@page "/downM"
+
+@using MudBlazor
+
+<PageTitle>Manejo del paciente</PageTitle>
+<MudContainer MaxWidth="MaxWidth.ExtraExtraLarge" Class="my-container">
+
+
+    <MudText Typo="Typo.h2" Align="Align.Center" Class="my-title">
+        MANEJO DEL PACIENTE
+    </MudText>
+</MudContainer>
+<MudContainer MaxWidth="MaxWidth.Medium" Class="my-container">
+    <MudCarousel MaxWidth="ExtraLarge" ItemsSource="@qs" @bind-SelectedIndex="selectedIndex" Style="height:400px;" AutoCycle="true">
+        <ItemTemplate>
+            <div class="d-flex justify-center" style="height:100%">
+                <img src="@context" alt="Imagen del carrusel" class="carousel-image" />
+            </div>
+        </ItemTemplate>
+    </MudCarousel>
+</MudContainer>
+<MudGrid Class="mt-6">
+    <MudItem xs="12" sm="12">
+        <MudText Align="Align.Start" Class=" my-justified-text">
+            El manejo de pacientes con Síndrome de Down (SD) requiere un enfoque multidisciplinario para abordar las diversas necesidades médicas, físicas y psicosociales de estos individuos. Estos
+            pacientes deben recibir seguimiento o atención por parte de un equipo de profesionales de salud y entre ellos los que pueden intervenir tenemos médicos, educadores especiales, terapeutas
+            del habla, terapeutas ocupacionales, fisioterapeutas, psicólogos y trabajadores sociales. (Zopfi Rubio Antonio Ricardo, 2019)
+            <br>
+            Algunas estrategias para un manejo adecuado del SD:
+
+        </MudText>
+        <MudText Class="nav-item px-6">
+           
+            <br>
+            •	De un breve paseo por el consultorio antes de intentar el tratamiento: Presente al paciente al personal del equipo asistencial y así se reducirá el temor del paciente a lo
+            “desconocido”.
+            <br>
+            •	Hable con lentitud y con términos sencillos: Asegúrese de que sus explicaciones son comprendidas preguntando a los pacientes si tienen alguna pregunta que formular.
+            <br>
+            •	Dé solamente una instrucción cada vez: Premie al paciente con felicitaciones tras la terminación de cada procedimiento o al finalizar alguna actividad.
+            <br>
+            •	Escuche atentamente al paciente: el personal debe ser particularmente sensible a los gestos y pedidos verbales.
+            <br>
+            •	Realice sesiones cortas: Avance gradualmente hacia procedimientos más difíciles después de que el paciente se haya acostumbrado al ambiente en el que se encuentre.
+            <br>
+            •	Programe la atención del paciente para horas tempranas del día, cuando el personal médico, su equipo asistencial y el paciente están menos fatigado.
+            <br>
+            •	Si una persona reúne las condiciones para recibir servicios especiales, un equipo de profesionales trabajará de manera conjunta para diseñar un Plan de Educación Individualizado.
+            <br>
+            •	Se pueden optar entre una escuela donde la mayoría de los niños no tienen discapacidades y una para niños con necesidades especiales, donde los educadores y profesionales de la salud
+            pueden ayudar a las familias a decidir qué entorno de aprendizaje es el mejor para su caso particular (Zopfi Rubio Antonio Ricardo, 2019)
+            <br>
+            <br>
+            Estrategias para el manejo
+            <br>
+        </MudText>
+        <MudContainer MaxWidth="MaxWidth.Medium" Class="d-flex justify-center align-center" Style="padding: 20px;">
+            <div style="width:700px; height:450px">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/S7J67Y_SzwY?si=CvvhIOoqxA68HvlA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
+            </div>
+        </MudContainer>
+        <MudText Typo="Typo.h5" Align="Align.Start">
+            NUTRICIONAL
+        </MudText>
+        <MudText Align="Align.Start" Class=" my-justified-text">
+            En un estudio realizado por  (Cádenas Castaño, Yepes Jiménez, & Alzate Yepes, 2021) se menciona que es importante entender que la inclusión del desayuno como un hábito de alimentación 
+            diaria, derivado de la comprensión sobre la importancia del consumo de una alimentación fraccionada para evitar periodos largos de ayuno intermitente no controlado, que generan que el 
+            cuerpo cree reservas de grasa y, por ende, un aumento indeseable de peso.
+            <br>
+            Otra forma de alimentación saludable es el cambio de métodos de cocción de los alimentos al preferir los más saludables, como al vapor, al horno o cocidos, ya que así se reduce el aporte 
+            de calorías provenientes del aceite que se usa en preparaciones como la fritura.
+            <br>
+            En el estudio anteriormente citado, se menciona que de los cambios más valiosos es la disminución en el consumo de bebidas azucaradas, como gaseosas o refrescos de caja, y de productos 
+            de paquete, sobre todo en los refrigerios o loncheras que eran enviadas a los niños y niñas para que consumieran en la fundación, conscientes del alto contenido de azúcar en estas 
+            bebidas y sus consecuencias en la salud humana, además de la presencia de ingredientes poco nutritivos en los productos de paquete, lo que impulsó la inclusión de jugos naturales y el 
+            impulso del consumo del llamado bagazo de las frutas, para aumentar el consumo de fibra.
+            <br>
+            Adicionalmente, menciona que el aumento del consumo de frutas, verduras y agua simple en la vida diaria de los niños y jóvenes, teniendo en cuenta que los vegetales deben ser incluidos 
+            en la alimentación diaria por su gran contenido de vitaminas y minerales, necesarios para su adecuado crecimiento y desarrollo; además de esto, también se expresó de manera consensuada 
+            que en una alimentación adecuada no se excluyen o prohíben alimentos, sino que se trata de consumirlos de una forma moderada y consciente, teniendo en claro que la alimentación no es 
+            solo un asunto fisiológico, sino que abarca muchos otros aspectos, como la cultura, el afecto, la economía y el disfrute, entre otros.
+            <br>
+            Por último, (Cádenas Castaño, Yepes Jiménez, & Alzate Yepes, 2021)  hace énfasis en la variedad en las preparaciones y la conservación de los tamaños de porciones, sobre todo en los 
+            refrigerios y almuerzos de los niños, en los que se pudo observar mediante las evidencias que todos los días intentaban ofrecerles preparaciones diferentes, incluidos todos los grupos 
+            de alimentos en cada momento de la alimentación.
+        </MudText>
+    </MudItem>
+
+</MudGrid>
+
+<MudGrid Class="mt-6">
+    <MudItem xs="12" sm="12">
+        <MudText Typo="Typo.h5" Align="Align.Start">
+            FISICO
+        </MudText>
+        <MudText Align="Align.Start" Class=" my-justified-text">
+            Según (Pérez Vázques, 2021) estos son algunos de los ejercicios que pueden realizarse para estimular al paciente con Síndrome de Down:
+        </MudText>
+        <MudText Align="Align.Start" Class=" my-justified-text">
+            <MudText Class="nav-item px-6">
+                •	Ejercicios de propiocepción y equilibrio: para reforzar estos factores utilizamos ciertos aditamentos:
+            </MudText>
+            <MudText Class="nav-item px-12">
+
+                - Caminar sobre una viga de equilibrio: la paciente caminó por la viga de 10 cm de altura realizando el patrón de alternancia de pies.
+                <br>
+                - Bipedestación y sedestación en balancín: en un balancín pequeño la paciente se colocó en bipedestación y sedestación tratando de mantener el equilibrio en todo momento durante 10 segundos.
+                <br>
+                - Brincar sobre trampolín: en un trampolín pequeño la paciente realizo diferentes saltos unipodal y bipodal.
+                <br>
+                - Pelota bobath: se realizaron diferentes movimientos sobre la pelota bobath, atrás, delante, a los lados y en forma circular manteniendo a la paciente recostada sobre la pelota y en sedestación.
+                <br>
+                <br>
+            </MudText>
+
+            <MudText Class="nav-item px-6">
+                •	Masajes terapéuticos: se realizaron masajes en cada uno de los músculos de la paciente de manera enérgica y suave yendo de distal a proximal buscando activar la musculatura por hipotonía.
+            </MudText>
+            <br>
+            <br>
+            <MudText Class="nav-item px-6">
+                •	Estimulación sensorial: en este tipo de tratamiento se aplicaron los siguientes ejercicios:
+            </MudText>
+            <MudText Class="nav-item px-12">
+                - Tapate sensorial: en donde se realizaron deambulaciones pasando por cada una de las texturas realizando diferentes movimientos de los pies.
+                <br>
+                - Cajas sensoriales: cajas compuestas por diversos materiales como arroz, arena, frijoles, bolitas de aluminio, pompones, canicas y cuadros de esponja duro, se escondía objetos más grandes dentro de las cajas, donde la paciente los tenía que encontrar.
+                <br>
+                - Seguir el pandero: trabajamos con un pandero realizando diferentes sonidos donde la paciente tenía que seguir la mirada hacia el sonido.
+                <br>
+                - Pelota con luces: la paciente lanzaba la pelota con luces en el área oscura intentando seguir la pelota.
+                <br>
+                <br>
+            </MudText>
+
+            <MudText Class="nav-item px-6">
+                •	Coordinación: para estimular esta habilidad motriz utilizamos una serie de ejercicios:
+            </MudText>
+            <MudText Class="nav-item px-12">
+
+                - Cama de cuerdas: tenía que insertar cada pie en los cuadros de la cama de cuerdas para pasar al otro extremo, alternando cada uno de los pues.
+                <br>
+                - Lanzamiento de pelota: la paciente realizaba lanzamientos de pelotas grandes y pequeñas que a su vez tenía que atrapar.
+                <br>
+                - Pasamanos: de manera asistida la paciente tenía que pasar el pasamanos alternando las manos en cada barra del mismo.
+                <br>
+                <br>
+            </MudText>
+
+            <MudText Class="nav-item px-6">
+                •	Motricidad fina: se trabajaron los siguientes ejercicios para estimular y reforzar la motricidad fina en la paciente:
+            </MudText>
+            <MudText Class="nav-item px-12">
+
+                - Despegar calcas: la paciente sobre una mesa tenía que despegar las calcas con ambas manos (alternándolas) y colocarlas en una caja. 35
+                <br>
+                - Tomar pompones con una tenaza: pompones colocados en la mesa tenían que ser tomados con unas tenazas aplicando la fuerza para lograrlo.
+                <br>
+                - Libro sensorial: utilizamos un libro sensorial trabajando con apartados relacionados con la motricidad fina como cierres, botones, ganchos, etc.
+                <br>
+                - Bloques de colores: se le pidió a la paciente que utilizará bloques de plástico lo cuales se ensartaban uno sobre otro para armar figuras y formas
+                <br>
+                <br>
+            </MudText>
+
+        </MudText>
+    </MudItem>
+
+</MudGrid>
+<MudGrid Class="mt-6">
+    <MudItem xs="12" sm="12">
+        <MudText Typo="Typo.h5" Align="Align.Start">
+            INTELECTUAL
+        </MudText>
+        <MudText Align="Align.Start" Class=" my-justified-text">
+            Estas actividades no solo fomentan la actividad física, sino que también tienen un impacto significativo en el desarrollo cognitivo y emocional, promoviendo una mejor calidad de vida y 
+            mayor independencia en personas con síndrome de Down. (Simaleza, 2024)
+@*             <br>
+            •	Proteína: Se utiliza el mismo que para la población sana. El total del nutriente debe representar entre el 15-20% del valor calórico total en menores de 1 año y el 15% en niños mayores
+            de 1 años hasta los 18 años.
+            <br>
+            •	Grasas: Debe representar el 50% de valor calórico total en niños de 0 a 6 meses, entre el 30-40% de 6 a 12 meses y el 30% en mayores de 1 año hasta los 18 meses.
+            <br>
+            •	Fibra: Para regular el bolo fecal es necesario ingerir fibra dietética y funcional que los alimentos contienen. La fibra se encuentra en alimentos leguminosos, vegetales y frutas.
+            La cantidad de fibra diaria que se debe dar a los niños y adolescentes a partir de 3-18 años es de 5g al día. (Gento Reyes, 2023) *@
+            <br>
+        </MudText>
+
+        <MudText Typo="Typo.h5" Align="Align.Start">
+            Baloncesto:
+        </MudText>
+        <MudText Align="Align.Start" Class="nav-item px-6 my-justified-text">
+            •	Desarrollo de habilidades motoras: Mejora la coordinación, manejo del balón y precisión en los tiros. Es eficaz para la rehabilitación y desarrollo físico e intelectual.
+            <br>
+            •	Entrenamiento estructurado: Un programa de 24 semanas mejora la composición corporal, flexibilidad, equilibrio, capacidad aeróbica y habilidades funcionales del baloncesto.
+            <br>
+        </MudText>
+
+        <MudText Typo="Typo.h5" Align="Align.Start">
+            Fútbol:
+        </MudText>
+        <MudText Align="Align.Start" Class="nav-item px-6 my-justified-text">
+            •	Impacto en la coordinación: Mejora la coordinación, medido a través de pruebas de salto vertical con y sin movimiento del brazo.
+            <br>
+            •	Promoción de la socialización: Desarrolla habilidades sociales y confianza en sí mismos.
+            <br>
+        </MudText>
+
+        <MudText Typo="Typo.h5" Align="Align.Start">
+            Natación y Tenis de Mesa:
+        </MudText>
+        <MudText Align="Align.Start" Class="nav-item px-6 my-justified-text">
+            •	Mejora de tiempos de reacción y habilidades motoras: Participar en tenis de mesa mejora los tiempos de reacción.
+            <br>
+            •	Beneficios físicos y mentales: Mejoran las habilidades motoras y contribuyen al bienestar general y salud cardiovascular.
+            <br>
+        </MudText>
+    </MudItem>
+
+</MudGrid>
+<br>
+<br>
+@code {
+    private int selectedIndex = 0;
+    private IList<string> qs = new List<string>
+    {
+        "Imagenes/Intelectual/cm1.jpg", "Imagenes/Intelectual/cm2.jpeg", "Imagenes/Intelectual/cm3.jpg", "Imagenes/Intelectual/cm4.jpeg",
+        "Imagenes/Intelectual/cm5.jpg", "Imagenes/Intelectual/cm6.jpg", "Imagenes/Intelectual/cm7.png", "Imagenes/Intelectual/cm8.jpg",
+        "Imagenes/Intelectual/cm9.jpg", "Imagenes/Intelectual/cm10.jpg", "Imagenes/Intelectual/cm11.jpg", "Imagenes/Intelectual/cm12.jpg"
+    };
+}

@@ -1,0 +1,372 @@
+﻿@page "/cerebralM"
+@using MudBlazor
+
+<PageTitle>Manejo del paciente</PageTitle>
+<MudContainer MaxWidth="MaxWidth.ExtraExtraLarge" Class="my-container">
+
+
+    <MudText Typo="Typo.h2" Align="Align.Center" Class="my-title">
+        MANEJO DEL PACIENTE
+    </MudText>
+    <MudText Align="Align.Start" Class=" my-justified-text">
+        La elección de técnicas de alimentación, suplementación, recomendaciones de actividad física y requerimientos apropiados para esta población, son factores relevantes que permiten mejorar 
+        su esperanza de vida. La toma de decisiones se basa en el grado de compromiso neurológico que presenta. (Gento Reyes, 2023)
+    </MudText>
+</MudContainer>
+<MudContainer MaxWidth="MaxWidth.Medium" Class="my-container">
+    <MudCarousel MaxWidth="ExtraLarge" ItemsSource="@qs" @bind-SelectedIndex="selectedIndex" Style="height:400px;" AutoCycle="true">
+        <ItemTemplate>
+            <div class="d-flex justify-center" style="height:100%">
+                <img src="@context" alt="Imagen del carrusel" class="carousel-image" />
+            </div>
+        </ItemTemplate>
+    </MudCarousel>
+</MudContainer>
+<MudGrid Class="mt-6">
+    <MudItem xs="12" sm="12">
+        <MudText Typo="Typo.h4" Align="Align.Start">
+            NUTRICIONAL
+        </MudText>
+        <MudText Align="Align.Start" Class=" my-justified-text">
+            Los pacientes que viven con Parálisis Cerebral presentan una diferente composición corporal, disminución de la masa grasa, masa ósea, densidad ósea y crecimiento lineal. La disminución
+            en la densidad ósea se asocia al daño neurológico. También presentan dificultad para alimentarse, deficiencias nutricionales principalmente calcio y vitamina D, disfagia, reflujo 
+            gastroesofágico, estreñimiento, entre otras. (Gento Reyes, 2023)
+            <br>
+            Primero el paciente que presenta parálisis cerebral debe tener una buena valoración del estado nutricional. Para ello el medico debe realizar una buena anamnesis que permitan detectar 
+            y cuantificar las posibles alteraciones y dificultades.
+            <br>
+            Debe incluir la evaluación de ingesta, cantidad y calidad del alimento, uso de vías complementarias de alimentación. Asimismo, la dependencia con el acto de alimentarse, la presencia 
+            de atoro que oriente el trastorno de la deglución, la postura, el tiempo que toma en alimentarse por la boca, hábitos de defecación y uso de fármacos. (Gento Reyes, 2023)
+        </MudText>
+    </MudItem>
+
+</MudGrid>
+
+<MudGrid Class="mt-6">
+    <MudItem xs="12" sm="12">
+        <MudText Typo="Typo.h5" Align="Align.Start">
+            A.	Determinación de requerimientos nutricionales
+        </MudText>
+        <MudText Align="Align.Start" Class=" my-justified-text">
+            Los requerimientos energéticos de los niños con PCI son menores que el de un niño normal, depende del grado de discapacidad motora, nivel de actividad física y tipo de parálisis 
+            cerebral. El seguimiento antropométrico es necesario para evaluar la suficiencia de los aportes utilizando peso, talla, perímetro cefálico y braquial y medición de pliegue tricipital.
+        </MudText>
+    </MudItem>
+
+</MudGrid>
+<MudGrid Class="mt-6">
+    <MudItem xs="12" sm="12">
+        <MudText Typo="Typo.h5" Align="Align.Start">
+            B.	Macronutrientes
+        </MudText>
+        <MudText Align="Align.Start" Class="nav-item px-6 my-justified-text">
+            •	Carbohidratos: Por falta de especificaciones para PCI se recomienda utilizar los requerimientos para la población sana. Deben representar entre un 30-40% del valor calórico total 
+            en niños de 0 a 6 meses, entre el 40-45% de 6 a 12 meses y entre el 50-55% entre 1 a 18 años.
+            <br>
+            •	Proteína: Se utiliza el mismo que para la población sana. El total del nutriente debe representar entre el 15-20% del valor calórico total en menores de 1 año y el 15% en niños mayores
+            de 1 años hasta los 18 años.
+            <br>
+            •	Grasas: Debe representar el 50% de valor calórico total en niños de 0 a 6 meses, entre el 30-40% de 6 a 12 meses y el 30% en mayores de 1 año hasta los 18 meses.
+            <br>
+            •	Fibra: Para regular el bolo fecal es necesario ingerir fibra dietética y funcional que los alimentos contienen. La fibra se encuentra en alimentos leguminosos, vegetales y frutas.
+            La cantidad de fibra diaria que se debe dar a los niños y adolescentes a partir de 3-18 años es de 5g al día. (Gento Reyes, 2023)
+        </MudText>
+    </MudItem>
+
+</MudGrid>
+<MudGrid Class="mt-6">
+    <MudItem xs="12" sm="12">
+        <MudText Typo="Typo.h5" Align="Align.Start">
+            C.	Micronutrientes
+        </MudText>
+        <MudText Align="Align.Start" Class=" my-justified-text">
+            Se evidencia una deficiencia en la ingesta o en la concentración plasmática de hierro, folato, niacina, calcio, vitamina D y E, zinc y selenio. Estos déficits son comunes en menores 
+            que poseen gastrostomías. La deficiencia de vitamina D es la más frecuente debido al bajo nivel de exposición solar, uso de drogas anticonvulsivantes y alimentos sin fortificación. 
+            Es necesario evaluar a cada paciente para suplementar los nutrientes deficientes, ya sea por medio de fórmulas especiales o medicamentosas. (Gento Reyes, 2023)
+        </MudText>
+    </MudItem>
+
+</MudGrid>
+<MudGrid Class="mt-6">
+    <MudItem xs="12" sm="12">
+        <MudText Typo="Typo.h5" Align="Align.Start">
+            D.	Postura para alimentar a niños con parálisis cerebral
+        </MudText>
+        <MudText Align="Align.Start" Class="nav-item px-6 my-justified-text">
+            La corrección de la postura de sedestación es de vital importancia por muchos motivos. (Gento Reyes, 2023)
+            <br>
+            •	El corregirla permite reducir la posibilidad de deformidades y aumentar la tolerancia a las actividades.
+            <br>
+            •	Permite mantener la capacidad de los órganos vitales aumentando así, la independencia funcional; con ello, la reducción del dolor y el aumento de la comodidad.
+            <br>
+            •	Se recomienda que esté semi sentado con una almohada en la parte posterior del cuerpo en la parte de la columna vertebral, por la falta de equilibrio y estabilidad para sentarse.
+            <br>
+            •	Para los niños que están en silla de ruedas esta posición es ideal para ellos, porque facilita la deglución de alimentos.
+        </MudText>
+    </MudItem>
+
+</MudGrid>
+<MudGrid Class="mt-6">
+    <MudItem xs="12" sm="12">
+        <MudText Typo="Typo.h5" Align="Align.Start">
+            E.	Maniobras para ayudar a tragar a niños con parálisis cerebral
+        </MudText>
+        <MudText Align="Align.Start" Class=" my-justified-text">
+            Estas estrategias o maniobras para deglutir fueron diseñadas para mejorar el movimiento de la lengua en niños que puedes seguir instrucciones. (Gento Reyes, 2023)
+            <br>
+            <br>
+            Maniobra de Mendelsohn: Consiste en sujetar la laringe cuando se eleva al momento de tragar y manteniendo esta posición segundos después de tragar. Esto mejora el 
+            paso de la comida de la boca a la garganta y reduce el residuo. (Gento Reyes, 2023)
+        </MudText>
+    </MudItem>
+
+</MudGrid>
+<MudContainer MaxWidth="MaxWidth.Medium" Class="d-flex justify-center align-center" Style="padding: 20px;">
+    <div style="width:700px; height:450px">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/pQukiIGltQ8?si=DNA0ngqTWzA2lA04" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+    </div>
+</MudContainer>
+<MudGrid Class="mt-6">
+    <MudItem xs="12" sm="12">
+        <MudText Align="Align.Start" Class=" my-justified-text">
+            Deglución forzada: se le pide al paciente que trague tan fuerte como le sea posible. La persona que ayuda al paciente puede asistir aplicando resistencia manual sobre la 
+            frente del paciente mientas traga, inclinando hacia delante un poco la cabeza y el cuello. (Gento Reyes, 2023)
+            <br>
+            El circuito consta de tres métodos, uno era correr, otro andar y otro ciclismo. Se realiza durante 10 min sin descanso entre paradas.
+            5 veces/semana circuito de Correr, andar y hacer bici. (Peña, y otros, 2021)
+
+        </MudText>
+    </MudItem>
+
+</MudGrid>
+<MudContainer MaxWidth="MaxWidth.Medium" Class="d-flex justify-center align-center" Style="padding: 20px;">
+    <div style="width:700px; height:450px">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/nfW3iQXBfUI?si=wIiB3weVWmi_BzbJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+    </div>
+</MudContainer>
+<MudGrid Class="mt-6">
+    <MudItem xs="12" sm="12">
+        <MudText Align="Align.Start" Class=" my-justified-text">
+            Maniobra de Masako: se sostiene la lengua del paciente fuera de la boca, con las manos. Se espera a que trague saliva. (Gento Reyes, 2023)
+        </MudText>
+    </MudItem>
+
+</MudGrid>
+<MudContainer MaxWidth="MaxWidth.Medium" Class="d-flex justify-center align-center" Style="padding: 20px;">
+    <div style="width:700px; height:450px">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/rP1OpWxqLUE?si=qlZnMFuIn9j7p4x8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+    </div>
+</MudContainer>
+
+<MudGrid Class="mt-6">
+    <MudItem xs="12" sm="12">
+        <MudText Typo="Typo.h4" Align="Align.Start">
+            FISICO
+        </MudText>
+        <MudText Align="Align.Start" Class=" my-justified-text">
+            El tratamiento fisioterápico dentro de la parálisis cerebral infantil debe ser lo más precoz posible, además de individualizado e integral. Es necesario una valoración íntegra del niño
+            con parálisis cerebral infantil por parte de un equipo multidisciplinar, planificar un tratamiento adecuado, tanto fisioterápico como por parte del equipo multidisciplinar. Realizar un
+            seguimiento y reevaluaciones para comprobar el progreso o modificar el tratamiento cuando así sea necesario. El objetivo principal será conseguir la mayor autonomía e independencia del
+            paciente. (NPunto, 2023)
+        </MudText>
+    </MudItem>
+
+</MudGrid>
+<MudGrid Class="mt-6">
+    <MudItem xs="12" sm="12">
+        <MudText Typo="Typo.h5" Align="Align.Start">
+            Kabat
+        </MudText>
+        <MudText Align="Align.Start" Class=" my-justified-text">
+            Reduce la espasticidad de las manos de tu niño con parálisis cerebral: Diagonales de Kabat
+        </MudText>
+    </MudItem>
+
+</MudGrid>
+<MudContainer MaxWidth="MaxWidth.Medium" Class="d-flex justify-center align-center" Style="padding: 20px;">
+    <div style="width:700px; height:450px">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Jr5Cs10WsMs?si=Dlpz1kucTlwR75Lk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+    </div>
+</MudContainer>
+<MudGrid Class="mt-6">
+    <MudItem xs="12" sm="12">
+        <MudText Typo="Typo.h5" Align="Align.Start">
+            Terapia Vojta
+        </MudText>
+        <MudText Align="Align.Start" Class=" my-justified-text">
+            Las técnicas de valoración neurocinesiológica del pofesor Vojta se siguen aplicando para la identificación temprana de alteraciones del desarrollo motor de lactantes y niños pequeños. 
+            La fisioterapia mediante la locomoción refleja se basa en los conocimientos sobre el desarrollo de la postura y del movimiento del niño.
+        </MudText>
+    </MudItem>
+
+</MudGrid>
+<MudContainer MaxWidth="MaxWidth.Medium" Class="d-flex justify-center align-center" Style="padding: 20px;">
+    <div style="width:700px; height:450px">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/7riiun6bkSU?si=JGiqSBVjckevY7Kj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+    </div>
+</MudContainer>
+<MudContainer MaxWidth="MaxWidth.Medium" Class="d-flex justify-center align-center" Style="padding: 20px;">
+    <div style="width:700px; height:450px">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/k2ItMf0ZNgM?si=p4D_H8ztrNs0Z9qB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+    </div>
+</MudContainer>
+<MudGrid Class="mt-6">
+    <MudItem xs="12" sm="12">
+        <MudText Typo="Typo.h5" Align="Align.Start">
+            Método Perfetti
+        </MudText>
+    </MudItem>
+
+</MudGrid>
+<MudContainer MaxWidth="MaxWidth.Medium" Class="d-flex justify-center align-center" Style="padding: 20px;">
+    <div style="width:700px; height:450px">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ivx5IX5LkWk?si=MyI-xXPgE8OEfaS8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+    </div>
+</MudContainer>
+<MudGrid Class="mt-6">
+    <MudItem xs="12" sm="12">
+        <MudText Typo="Typo.h5" Align="Align.Start">
+            Método Peto
+        </MudText>
+    </MudItem>
+
+</MudGrid>
+<MudContainer MaxWidth="MaxWidth.Medium" Class="d-flex justify-center align-center" Style="padding: 20px;">
+    <div style="width:700px; height:450px">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/UjR5wte7WAo?si=EMuL-4PY4aaNIqg3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+    </div>
+</MudContainer>
+<MudGrid Class="mt-6">
+    <MudItem xs="12" sm="12">
+        <MudText Typo="Typo.h5" Align="Align.Start">
+            Método de Rood
+        </MudText>
+        <MudContainer MaxWidth="MaxWidth.Medium" Class="d-flex justify-center align-center" Style="padding: 20px;">
+            <div style="width:700px; height:450px">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/9yodRx7dePs?si=zD_4N__SNxqh8y1X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
+            </div>
+        </MudContainer>
+        <MudText Align="Align.Start" Class=" my-justified-text">
+            Para más información relacionado a las diferentes terapias físicas mencionadas para el manejo de estos pacientes.
+        </MudText>
+    </MudItem>
+    <MudText Class="mt-2" Style="text-decoration-color:initial">
+        <MudLink Href="https://www.npunto.es/content/src/pdf-articulo/64c77d0749f27art2.pdf " Target="_blank">
+            visitar el siguiente link aqui
+        </MudLink>
+    </MudText>
+</MudGrid>
+@* <MudContainer MaxWidth="MaxWidth.Medium" Class="d-flex justify-center align-center" Style="padding: 20px;">
+    <div style="width:700px; height:450px">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/fDiYEU9OdoU?si=aAbCZ3d6qCFsFYrO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+    </div>
+</MudContainer> *@
+<MudGrid Class="mt-6">
+    <MudItem xs="12" sm="12">
+        <MudText Typo="Typo.h5" Align="Align.Start">
+            Ejercicios de movilizaciones para niños con Parálisis Cerebral
+        </MudText>
+    </MudItem>
+
+</MudGrid>
+<MudContainer MaxWidth="MaxWidth.Medium" Class="d-flex justify-center align-center" Style="padding: 20px;">
+    <div style="width:700px; height:450px">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/fDiYEU9OdoU?si=aAbCZ3d6qCFsFYrO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+    </div>
+</MudContainer>
+
+<MudGrid Class="mt-6">
+    <MudItem xs="12" sm="12">
+        <MudText Typo="Typo.h4" Align="Align.Start">
+            INTELECTUAL
+        </MudText>
+        <MudText Align="Align.Start" Class=" my-justified-text">
+            Alrededor del 50% de las personas afectadas presenta algún grado de DI. Los portadores de PC extrapiramidales tienen mejor nivel intelectual, y aquellos con tetraparesia espástica 
+            cursan con déficit intelectual más severo. Es frecuente que se presenten alteraciones del lenguaje, las cuales pueden ser diversas. Además del problema motor y del lenguaje, en 
+            ocasiones existen trastornos de la percepción visual, auditiva y táctil. Los niños afectados por parálisis cerebral revelan un control anormal tanto del movimiento como de la postura, 
+            a causa de una alteración del desarrollo cerebral. ( García y otros, 2022)
+        </MudText>
+    </MudItem>
+
+</MudGrid>
+<MudGrid Class="mt-6">
+    <MudItem xs="12" sm="12">
+        <MudText Typo="Typo.h5" Align="Align.Start">
+            La terapia Bobath
+        </MudText>
+        <MudText Align="Align.Start" Class=" my-justified-text">
+            El objetivo principal es maximizar el potencial del niño para adquirir habilidades motrices para las actividades de la vida diaria. Esto se alcanzará adquiriendo un buen control del 
+            tono postural inhibiendo patrones de actividad refleja anormal y facilitando patrones motores normales.
+        </MudText>
+    </MudItem>
+
+</MudGrid>
+<MudContainer MaxWidth="MaxWidth.Medium" Class="d-flex justify-center align-center" Style="padding: 20px;">
+    <div style="width:700px; height:450px">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/2Mk2NrAWWOY?si=4-oXethR3m6_JVL1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+    </div>
+</MudContainer>
+<MudGrid Class="mt-6">
+    <MudItem xs="12" sm="12">
+        <MudText Typo="Typo.h5" Align="Align.Start">
+            Método Phelps
+        </MudText>
+        <MudText Align="Align.Start" Class=" my-justified-text">
+            Educar el sistema motor para realizar actividades de la vida diaria y realizar movimientos condicionados para obtener un nivel de relación adecuado. Se fundamentó en las técnicas de 
+            relajación progresiva de Jacobson (contracción-relajación), movimientos condicionados con secuencias específicas de movimiento, oposición en el músculo del lado no patológico para 
+            originar activación en el músculo del lado patológico y añadió férulas y ortesis para evitar o corregir de deformidades.
+        </MudText>
+    </MudItem>
+
+</MudGrid>
+<MudGrid Class="mt-6">
+    <MudItem xs="12" sm="12">
+        <MudText Typo="Typo.h5" Align="Align.Start">
+            Método Padovan
+        </MudText>
+        <MudText Align="Align.Start" Class=" my-justified-text">
+            Estimulación del sistema nervioso con el fin de adquirirla locomoción, el habla y el pensamiento con el objetivo de que la persona pueda desarrollar dichas capacidades
+        </MudText>
+    </MudItem>
+
+</MudGrid>
+<MudContainer MaxWidth="MaxWidth.Medium" Class="d-flex justify-center align-center" Style="padding: 20px;">
+    <div style="width:700px; height:450px">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/f_8EFPE2Op0?si=wAHgXe5p0_g5nlzR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+    </div>
+</MudContainer>
+@code {
+    private int selectedIndex = 0;
+    private IList<string> qs = new List<string>
+    {
+        "Imagenes/Intelectual/cm1.jpg", "Imagenes/Intelectual/cm2.jpeg", "Imagenes/Intelectual/cm3.jpg", "Imagenes/Intelectual/cm4.jpeg",
+        "Imagenes/Intelectual/cm5.jpg", "Imagenes/Intelectual/cm6.jpg", "Imagenes/Intelectual/cm7.png", "Imagenes/Intelectual/cm8.jpg",
+        "Imagenes/Intelectual/cm9.jpg", "Imagenes/Intelectual/cm10.jpg", "Imagenes/Intelectual/cm11.jpg", "Imagenes/Intelectual/cm12.jpg"
+    };
+}

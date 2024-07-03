@@ -1,0 +1,33 @@
+﻿@page "/intelectualQ"
+
+<PageTitle>Que es</PageTitle>
+<MudContainer MaxWidth="MaxWidth.ExtraExtraLarge" Class="my-container">
+
+
+    <MudText Typo="Typo.h2" Align="Align.Center" Class="my-title">
+        ¿QUÉ ES?
+    </MudText>
+
+</MudContainer>
+<MudContainer MaxWidth="MaxWidth.Medium" Class="my-container">
+    <MudCarousel MaxWidth="ExtraLarge" ItemsSource="@di" @bind-SelectedIndex="selectedIndex" Style="height:400px;" AutoCycle="true">
+        <ItemTemplate>
+            <div class="d-flex justify-center" style="height:100%">
+                <img src="@context" alt="Imagen del carrusel" class="carousel-image" />
+            </div>
+        </ItemTemplate>
+    </MudCarousel>
+</MudContainer>
+<MudText Typo="Typo.body1 " Align="Align.Center" Class=" my-justified-text">
+    La discapacidad intelectual se refiere a déficits significativos tanto en el funcionamiento intelectual (razonamiento, resolución de problemas, planificación, abstracción, aprendizaje, etc.)
+    como en la conducta adaptativa, que abarcan habilidades conceptuales, sociales y prácticas, de distinta gravedad y con etiología múltiple. (Campo, Aránzazu, Pérez, Toledo, & Fernández, 2022)
+</MudText>
+
+
+@code {
+    private int selectedIndex = 0;
+    private IList<string> di = new List<string>
+    {
+        "Imagenes/di1.jpg", "Imagenes/di2.jpg", "Imagenes/di3.jpg", "Imagenes/di4.jpg"
+    };
+}

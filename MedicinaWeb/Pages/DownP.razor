@@ -1,0 +1,41 @@
+﻿@page "/downP"
+
+<PageTitle>Prevalencia</PageTitle>
+<MudContainer MaxWidth="MaxWidth.ExtraExtraLarge" Class="my-container">
+
+
+    <MudText Typo="Typo.h2" Align="Align.Center" Class="my-title">
+        PREVALENCIA
+    </MudText>
+
+</MudContainer>
+<MudContainer MaxWidth="MaxWidth.Medium" Class="my-container">
+    <MudCarousel MaxWidth="ExtraLarge" ItemsSource="@qs" @bind-SelectedIndex="selectedIndex" Style="height:400px;" AutoCycle="true">
+        <ItemTemplate>
+            <div class="d-flex justify-center" style="height:100%">
+                <img src="@context" alt="Imagen del carrusel" class="carousel-image" />
+            </div>
+        </ItemTemplate>
+    </MudCarousel>
+</MudContainer>
+<MudText Typo="Typo.body1 " Align="Align.Center" Class=" my-justified-text">
+    Un estudio exhaustivo realizado por Anath et al. (2017) examinó la prevalencia del Síndrome de Down a nivel mundial a través de una revisión sistemática de la literatura. Los investigadores 
+    recopilaron y analizaron datos de diversos países para obtener una estimación global precisa. Sus hallazgos revelaron que "la prevalencia global estimada de nacimientos con Síndrome de Down 
+    fue de 10.2 por cada 10,000 nacidos vivos" (Anath, 2017).Esta cifra destaca la importancia de comprender la magnitud de esta condición genética y sus implicaciones para la salud pública y los 
+    servicios de atención médica en todo el mundo.
+    <br>
+    El artículo "Epidemiología del Síndrome de Down en Ecuador" por Ana Rodríguez et al., publicado en la Revista Ecuatoriana de Neurología en 2018, investigó la prevalencia del Síndrome de Down 
+    en Ecuador y reveló que "la prevalencia estimada de Síndrome de Down en Ecuador es de aproximadamente 1 caso por cada 1,000 nacidos vivos" (Rodríguez, 2018).
+
+</MudText>
+
+<br>
+<br>
+
+@code {
+    private int selectedIndex = 0;
+    private IList<string> qs = new List<string>
+    {
+        "Imagenes/dp1.jpeg", "Imagenes/dp2.jpeg", "Imagenes/dp3.jpg", "Imagenes/dp4.jpg"
+    };
+}

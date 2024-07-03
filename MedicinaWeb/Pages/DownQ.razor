@@ -1,0 +1,38 @@
+﻿@page "/downQ"
+<PageTitle>Que es</PageTitle>
+<MudContainer MaxWidth="MaxWidth.ExtraExtraLarge" Class="my-container">
+
+
+    <MudText Typo="Typo.h2" Align="Align.Center" Class="my-title">
+        ¿QUÉ ES?
+    </MudText>
+
+</MudContainer>
+<MudContainer MaxWidth="MaxWidth.Medium" Class="my-container">
+    <MudCarousel MaxWidth="ExtraLarge" ItemsSource="@dq" @bind-SelectedIndex="selectedIndex" Style="height:400px;" AutoCycle="true">
+        <ItemTemplate>
+            <div class="d-flex justify-center" style="height:100%">
+                <img src="@context" alt="Imagen del carrusel" class="carousel-image" />
+            </div>
+        </ItemTemplate>
+    </MudCarousel>
+</MudContainer>
+<MudText Typo="Typo.body1 " Align="Align.Center" Class=" my-justified-text">
+    "El síndrome de Down es una alteración genética causada por la presencia de una copia extra del cromosoma 21, lo que resulta en características físicas y cognitivas únicas". (Sherman, 2022).El 
+    Síndrome de Down es una condición genética que ocurre cuando un individuo nace con un cromosoma adicional en el par 21. En lugar de las dos copias habituales del cromosoma 21, las personas con 
+    Síndrome de Down tienen tres copias completas o una copia parcial extra de este cromosoma. Esta alteración cromosómica adicional es la responsable de las características físicas y cognitivas 
+    particulares que se observan en esta condición.
+</MudText>
+<br>
+<br>
+@code {
+    private int selectedIndex = 0;
+    private IList<string> dq = new List<string>
+    {
+        "Imagenes/dq1.jpg", "Imagenes/dq2.jpg", "Imagenes/dq3.jpg", "Imagenes/dq4.jpg"
+    };
+}
+
+@code {
+
+}

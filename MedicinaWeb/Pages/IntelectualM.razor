@@ -1,0 +1,198 @@
+﻿@page "/intelectualM"
+@using MudBlazor
+<PageTitle>Manejo del paciente</PageTitle>
+<MudContainer MaxWidth="MaxWidth.ExtraExtraLarge" Class="my-container">
+
+
+    <MudText Typo="Typo.h2" Align="Align.Center" Class="my-title">
+        MANEJO DEL PACIENTE
+    </MudText>
+    <MudText Align="Align.Start" Class=" my-justified-text">
+        Los pacientes con discapacidad tienen limitaciones para ejecutar las actividades básicas cotidianas de la vida diaria y la participación social, por tanto, es necesario conocer 
+        herramientas diagnósticas de valoración pragmáticas para su detección y manejo precoz, para evitar complicaciones que empeoren su calidad de vida. (Ropero, 2022)
+    </MudText>
+</MudContainer>
+<MudContainer MaxWidth="MaxWidth.Medium" Class="my-container">
+    <MudCarousel MaxWidth="ExtraLarge" ItemsSource="@qs" @bind-SelectedIndex="selectedIndex" Style="height:400px;" AutoCycle="true">
+        <ItemTemplate>
+            <div class="d-flex justify-center" style="height:100%">
+                <img src="@context" alt="Imagen del carrusel" class="carousel-image" />
+            </div>
+        </ItemTemplate>
+    </MudCarousel>
+</MudContainer>
+<MudGrid Class="mt-6">
+    <MudItem xs="12" sm="12">
+        <MudText Typo="Typo.h4" Align="Align.Start">
+            NUTRICIONAL
+        </MudText>
+        <MudText Align="Align.Start" Class=" my-justified-text">
+            El suministro de la alimentación en personas con discapacidad intelectual pueden ser necesarios cuando se presenta también alteraciones de la motricidad que puedan afectar funciones 
+            como la habilidad para alimentarse de forma autónoma o trastornos en la deglución para lo cual se puede recurrir a los apoyos referidos en el aparte de discapacidad física, razón por 
+            la cual la alimentación dietético-nutricional debe ser individualizado para adaptar el tipo de alimentos, su frecuencia, la textura, las diferentes técnicas culinarias, así como el 
+            tipo de alimentación (vía oral o por sonda) a las particularidades funcionales y de salud de la persona afectada. (Barasoain, 2022)
+            <br>
+            Se debe implementar una dieta rica en proteínas y baja en grasa; para evitar esto se pueden emplear técnicas culinarias como al vapor, a la plancha o al horno.  Además, para reducir 
+            la inflamación se suplementan ácidos grasos de omega 3 y con antocianinas presentes en los frutos rojos. En su dieta se incluyen, también, probióticos con melisa, triptófano y 
+            vitaminas del grupo B, que han mejorado su equilibrio intestinal y han contribuido a reducir su estrés.  Se recomienda preparar recetas que sean apetitosas y saludables combinando de 3 
+            a 4 colores para que sean llamativas al momento de digerirlas, y tratar de que la comida no sea repetitiva sino variada en donde se incluya los diferentes alimentos (lácteos, cereales,
+            carnes, vegetales y frutas). Se debe evitar el tabaco, alcohol y sustancias psicoactivas, realizar ejercicio físico de manera regular, relaciones sociales, equilibrio mental, evitar
+            contaminación ambiental y mantener una adecuada higiene. (Rodriguez, 2023)
+@*             <br> *@
+
+
+
+        </MudText>
+        <MudText Class="nav-item px-6">
+            •	La elección de una vía u otra dependerá del estado nutricional y clínico del paciente, y se debe tomar por parte del equipo sanitario en el que se integre el dietista-nutricionista.
+            En general, la vía preferente es la oral y a base preparaciones culinarias sabrosas complementadas o no con preparados nutricionales especiales.
+            <br>
+            •	La nutrición por sonda sólo se recomienda en personas con alteraciones graves de la deglución, incapacidad para la ingesta oral, o cuando por vía oral no se asegure un aporte de
+            energía y nutrientes adaptados a sus necesidades.
+            <br>
+            •	En los casos de muy reducida movilidad o alimentación compulsiva y baja sensación de saciedad, en el plan de alimentación diaria se deben incluir principalmente alimentos de bajo
+            contenido calórico y ricos en fibra como frutas hortalizas, y limitar la cantidad aquellos de moderado o alto contenido de energía, tales legumbres pastas, arroces, pan, frutos secos,
+            quesos. (Gil, 2023)
+        </MudText>
+
+        
+    </MudItem>
+
+</MudGrid>
+
+<MudGrid Class="mt-6">
+    <MudItem xs="12" sm="12">
+        <MudText Typo="Typo.h4" Align="Align.Start">
+            FISICO
+        </MudText>
+        <MudText Align="Align.Start" Class=" my-justified-text">
+            Se ha observado que la duración de tratamiento varía entre 8 a 12 semanas, siendo 12 semanas la duración más común en la mayoría de los estudios. Esto nos indica que para que haya una 
+            mejora de estos pacientes en los objetivos planteados el tratamiento tiene que tener una duración media de 12 meses.
+
+        </MudText>
+    </MudItem>
+
+</MudGrid>
+<MudGrid Class="mt-6">
+    <MudItem xs="12" sm="12">
+        <MudText Typo="Typo.h5" Align="Align.Start">
+            Circuito de Ejercicios Aeróbicos
+        </MudText>
+        <MudText Align="Align.Start" Class=" my-justified-text">
+            Se basa en ejercicios aeróbicos para mejorar la capacidad pulmonar en pacientes con DI ya que se había observado que había disminuido su capacidad pulmonar y se demuestra que sí que 
+            hay un aumento del rendimiento respiratorio en los pacientes que recibieron este tratamiento.
+            <br>
+            El circuito consta de tres métodos, uno era correr, otro andar y otro ciclismo. Se realiza durante 10 min sin descanso entre paradas.
+            5 veces/semana circuito de Correr, andar y hacer bici. (Peña, y otros, 2021)
+
+        </MudText>
+    </MudItem>
+
+</MudGrid>
+<MudContainer MaxWidth="MaxWidth.Medium" Class="d-flex justify-center align-center" Style="padding: 20px;">
+    <div style="width:700px; height:450px">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/oxwalXynISs?si=uOiUdtFrrQqXHYZw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+    </div>
+</MudContainer>
+<MudGrid Class="mt-6">
+    <MudItem xs="12" sm="12">
+        <MudText Typo="Typo.h5" Align="Align.Start">
+            Trampolín y Cama Elástica
+        </MudText>
+        <MudText Align="Align.Start" Class=" my-justified-text">
+            Ejercicio en trampolín/cama elástica para niños con ID moderada para mejorar las habilidades motoras y el equilibrio y su motivación.o.
+        </MudText>
+    </MudItem>
+
+</MudGrid>
+<MudContainer MaxWidth="MaxWidth.Medium" Class="d-flex justify-center align-center" Style="padding: 20px;">
+    <div style="width:700px; height:450px">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/KH963TCi2ac?si=DAqyDCimzV1giOpn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+    </div>
+</MudContainer>
+<MudGrid Class="mt-6">
+    <MudItem xs="12" sm="12">
+        <MudText Typo="Typo.h5" Align="Align.Start">
+            Equilibrio Estático
+        </MudText>
+        <MudText Align="Align.Start" Class=" my-justified-text">
+            Se trabajó sobre el objetivo de conseguir un mejor equilibrio estático en los jóvenes con discapacidad intelectual mediante el entrenamiento físico.
+            <br >
+            Los ejercicios a realizar son prone- and back-lying en una pelota de rehabilitación (desestabilizarse en decúbito supino y decúbito prono), otro en la 
+            posición de rodillas con las manos y las rodillas descansando en almohadas de rehabilitación, se busca mantener el equilibrio y la parte superior derecha y 
+            la izquierda en posición horizontal, el siguiente, manteniendo la postura sentada correcta en una bola de la rehabilitación, se busca mantener el equilibrio 
+            de la pelvis, el siguiente separando un pie del suelo en sedestación se intenta mantener el equilibrio de la pelvis en el plano frontal, siguiente, en bipedestación 
+            en un almohada de rehabilitación, intentar realizar una flexión de la rodilla, después caminando descalzo en un esterilla de goma con desequilibrio y para terminar 
+            ir caminando por el gimnasio y pisar las almohadas de rehabilitación de diferente espesor.
+            45 minutos 2 veces por semana ejercicios sensorio-motores (circuito). (Peña, y otros, 2021)
+
+        </MudText>
+    </MudItem>
+
+</MudGrid>
+<MudContainer MaxWidth="MaxWidth.Medium" Class="d-flex justify-center align-center" Style="padding: 20px;">
+    <div style="width:700px; height:450px">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/h2apzpfxraY?si=jThcRN7A4kn2S2e5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+    </div>
+</MudContainer>
+<MudGrid Class="mt-6">
+    <MudItem xs="12" sm="12">
+        <MudText Typo="Typo.h5" Align="Align.Start">
+            Resistencia Física
+        </MudText>
+        <MudText Align="Align.Start" Class=" my-justified-text">
+            Se ha estudiado que el entrenamiento mediante la resistencia física, reduce la inflamación en personas con DI.
+            <br>
+            Este circuito se realizó circularmente en 6 estaciones: flexión del brazo, extensión de la pierna, remo sentado, flexión de la pierna, extensión de tríceps, ejercicio de prensa 
+            con la pierna.
+            <br>
+            Circuito de 6 paradas. 3 veces por semana.
+            <br>
+            Circuito de 6 paradas. 3 veces por semana.
+            Los objetivos recogidos son: equilibrio, marcha, capacidad pulmonar, habilidades motoras, equilibrio, tiempo de reacción, bienestar general, fuerza, resistencia y sedentarismo. (Peña, y otros, 2021)
+
+
+        </MudText>
+    </MudItem>
+
+</MudGrid>
+
+
+<MudGrid Class="mt-6">
+    <MudItem xs="12" sm="12">
+        <MudText Typo="Typo.h4" Align="Align.Start">
+            INTELECTUAL
+        </MudText>
+        <MudText Align="Align.Start" Class=" my-justified-text">
+            Se implementa un Plan Educativo Individualizado con objetivos específicos y métodos de enseñanza adaptativos, como técnicas multisensoriales y ayudas tecnológicas. Se proporcionan 
+            terapias especializadas (habla, ocupacional, física) y apoyo psicosocial, incluyendo terapia cognitivo-conductual y asesoramiento familiar.
+            <br>
+            <br>
+            ¿Qué puedes hacer?
+        </MudText>
+    </MudItem>
+
+</MudGrid>
+<MudContainer MaxWidth="MaxWidth.Medium" Class="d-flex justify-center align-center" Style="padding: 20px;">
+    <div style="width:700px; height:450px">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/iNw3Pi4MpHA?si=64WXPSq5DgWEAmGz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+    </div>
+</MudContainer>
+@code {
+    private int selectedIndex = 0;
+    private IList<string> qs = new List<string>
+    {
+        "Imagenes/Fisico/mdi1.jpg", "Imagenes/Fisico/mdi2.jpg", "Imagenes/Fisico/mdi3.jpg", "Imagenes/Fisico/mdi4.jpg" 
+        , "Imagenes/Fisico/mdi5.jpg", "Imagenes/Fisico/mdi6.jpg", "Imagenes/Fisico/mdi7.jpg"
+        , "Imagenes/Fisico/mdi8.jpg", "Imagenes/Fisico/mdi9.jpg", "Imagenes/Fisico/mdi10.jpg"
+        , "Imagenes/Fisico/mdi11.jpg", "Imagenes/Fisico/mdi12.jpg"
+    };
+}

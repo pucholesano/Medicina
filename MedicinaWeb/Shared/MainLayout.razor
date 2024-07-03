@@ -3,6 +3,7 @@
 <MudThemeProvider />
 <MudDialogProvider />
 <MudSnackbarProvider /> 
+
 <div class="page">
  
     <div class="sidebar">
@@ -10,9 +11,13 @@
     </div>
 
     <main>
-@*         <div class="top-row px-4">
-            <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
-        </div> *@
+        @* <div class="top-row px-4" style="background-color: #9cc277;"> *@
+         <div class="top-row px-4" style="background-color: #72964f;">
+            <NavLink style="color:white" href="acercaDe">
+                <MudIcon Icon="@Icons.Material.Filled.VerifiedUser" Class="oi oi-info" aria-hidden="true" />
+                <span class="ml-2">Acerca de?</span>
+            </NavLink>
+        </div>
 
         <article class="content px-4">
             @Body

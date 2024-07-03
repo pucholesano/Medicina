@@ -16,7 +16,8 @@
                 <span class="ml-2">Inicio</span>
             </NavLink>
         </div>
-        <!-- Tema 1 -->
+
+        <!-- SÍNDROME DE ESPECTRO AUTISTA -->
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="" @onclick="()=>expandirSubMenu=!expandirSubMenu">
                 <MudIcon Icon="@Icons.Material.Filled.SentimentNeutral" Class="oi oi-check" aria-hidden="true" />
@@ -52,47 +53,11 @@
             
         </div>
 
-        <!-- Tema 2 -->
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="autistaP" @onclick="()=>expandirSubMenu2=!expandirSubMenu2">
-                <MudIcon Icon="@Icons.Material.Filled.SentimentNeutral" Class="oi oi-check" aria-hidden="true" />
-                <span class="ml-2">Discapacidad intelectual  </span>
-            </NavLink>
-            <!-- Subtemas de Tema 1 -->
-            @if (expandirSubMenu2)
-            {
-                <div class="nav-submenu">
-                    <!-- Sub tema 1.1 -->
-                    <div class="nav-item px-6">
-                        <NavLink class="nav-link" href="autistaQ">
-                            <MudIcon Icon="@Icons.Material.Filled.Info" Class="oi oi-medical-cross" aria-hidden="true" />
-                            <span class="ml-2">Que es</span>
-                        </NavLink>
-                    </div>
-                    <!-- Sub tema 1.2 -->
-                    <div class="nav-item px-6">
-                        <NavLink class="nav-link" href="autistaM">
-                            <MudIcon Icon="@Icons.Material.Filled.Article" Class="oi oi-info" aria-hidden="true" />
-                            <span class="ml-2">Prevalencia</span>
-                        </NavLink>
-                    </div>
-                    <div class="nav-item px-6">
-                        <NavLink class="nav-link" href="autistaM">
-                            <MudIcon Icon="@Icons.Material.Filled.Assistant" Class="oi oi-info" aria-hidden="true" />
-                            <span class="ml-2">Manejo del paciente</span>
-                        </NavLink>
-                    </div>
-                </div>
-            
-            }
-            
-        </div>
-
-        <!-- Tema 3 -->
+        <!-- DISCAPACIDAD INTELECTUAL -->
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="" @onclick="()=>expandirSubMenu3=!expandirSubMenu3">
                 <MudIcon Icon="@Icons.Material.Filled.SentimentNeutral" Class="oi oi-check" aria-hidden="true" />
-                <span class="ml-2">Paralisis cerebral  </span>
+                <span class="ml-2">Discapacidad intelectual  </span>
             </NavLink>
             <!-- Subtemas de Tema 1 -->
             @if (expandirSubMenu3)
@@ -100,20 +65,20 @@
                 <div class="nav-submenu">
                     <!-- Sub tema 1.1 -->
                     <div class="nav-item px-6">
-                        <NavLink class="nav-link" href="autistaQ">
+                        <NavLink class="nav-link" href="intelectualQ">
                             <MudIcon Icon="@Icons.Material.Filled.Info" Class="oi oi-medical-cross" aria-hidden="true" />
                             <span class="ml-2">Que es</span>
                         </NavLink>
                     </div>
                     <!-- Sub tema 1.2 -->
                     <div class="nav-item px-6">
-                        <NavLink class="nav-link" href="autistaM">
+                        <NavLink class="nav-link" href="intelectualP">
                             <MudIcon Icon="@Icons.Material.Filled.Article" Class="oi oi-info" aria-hidden="true" />
                             <span class="ml-2">Prevalencia</span>
                         </NavLink>
                     </div>
                     <div class="nav-item px-6">
-                        <NavLink class="nav-link" href="autistaM">
+                        <NavLink class="nav-link" href="intelectualM">
                             <MudIcon Icon="@Icons.Material.Filled.Assistant" Class="oi oi-info" aria-hidden="true" />
                             <span class="ml-2">Manejo del paciente</span>
                         </NavLink>
@@ -124,6 +89,41 @@
 
         </div>
 
+        <!-- PARALISIS CEREBRAL -->
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="" @onclick="()=>expandirSubMenu2=!expandirSubMenu2">
+                <MudIcon Icon="@Icons.Material.Filled.SentimentNeutral" Class="oi oi-check" aria-hidden="true" />
+                <span class="ml-2">Paralisis cerebral  </span>
+            </NavLink>
+            <!-- Subtemas de Tema 1 -->
+            @if (expandirSubMenu2)
+            {
+                <div class="nav-submenu">
+                    <!-- Sub tema 1.1 -->
+                    <div class="nav-item px-6">
+                        <NavLink class="nav-link" href="cerebralQ">
+                            <MudIcon Icon="@Icons.Material.Filled.Info" Class="oi oi-medical-cross" aria-hidden="true" />
+                            <span class="ml-2">Que es</span>
+                        </NavLink>
+                    </div>
+                    <!-- Sub tema 1.2 -->
+                    <div class="nav-item px-6">
+                        <NavLink class="nav-link" href="cerebralP">
+                            <MudIcon Icon="@Icons.Material.Filled.Article" Class="oi oi-info" aria-hidden="true" />
+                            <span class="ml-2">Prevalencia</span>
+                        </NavLink>
+                    </div>
+                    <div class="nav-item px-6">
+                        <NavLink class="nav-link" href="cerebralM">
+                            <MudIcon Icon="@Icons.Material.Filled.Assistant" Class="oi oi-info" aria-hidden="true" />
+                            <span class="ml-2">Manejo del paciente</span>
+                        </NavLink>
+                    </div>
+                </div>
+
+            }
+
+        </div>
 
         <!-- Tema 4 -->
         <div class="nav-item px-3">
@@ -137,20 +137,20 @@
                 <div class="nav-submenu">
                     <!-- Sub tema 1.1 -->
                     <div class="nav-item px-6">
-                        <NavLink class="nav-link" href="autistaQ">
+                        <NavLink class="nav-link" href="downQ">
                             <MudIcon Icon="@Icons.Material.Filled.Info" Class="oi oi-medical-cross" aria-hidden="true" />
                             <span class="ml-2">Que es</span>
                         </NavLink>
                     </div>
                     <!-- Sub tema 1.2 -->
                     <div class="nav-item px-6">
-                        <NavLink class="nav-link" href="autistaM">
+                        <NavLink class="nav-link" href="downP">
                             <MudIcon Icon="@Icons.Material.Filled.Article" Class="oi oi-info" aria-hidden="true" />
                             <span class="ml-2">Prevalencia</span>
                         </NavLink>
                     </div>
                     <div class="nav-item px-6">
-                        <NavLink class="nav-link" href="autistaM">
+                        <NavLink class="nav-link" href="downM">
                             <MudIcon Icon="@Icons.Material.Filled.Assistant" Class="oi oi-info" aria-hidden="true" />
                             <span class="ml-2">Manejo del paciente</span>
                         </NavLink>

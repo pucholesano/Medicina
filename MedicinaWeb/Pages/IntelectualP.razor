@@ -1,0 +1,35 @@
+﻿@page "/intelectualP"
+
+<PageTitle>Prevalencia</PageTitle>
+<MudContainer MaxWidth="MaxWidth.ExtraExtraLarge" Class="my-container">
+
+
+    <MudText Typo="Typo.h2" Align="Align.Center" Class="my-title">
+        PREVALENCIA
+    </MudText>
+
+</MudContainer>
+<MudContainer MaxWidth="MaxWidth.Medium" Class="my-container">
+    <MudCarousel MaxWidth="ExtraLarge" ItemsSource="@pi" @bind-SelectedIndex="selectedIndex" Style="height:400px;" AutoCycle="true">
+        <ItemTemplate>
+            <div class="d-flex justify-center" style="height:100%">
+                <img src="@context" alt="Imagen del carrusel" class="carousel-image" />
+            </div>
+        </ItemTemplate>
+    </MudCarousel>
+</MudContainer>
+<MudText Typo="Typo.body1 " Align="Align.Center" Class=" my-justified-text">
+    La prevalencia mundial de la discapacidad intelectual oscila entre 1 y el 3% de la población y el 90% tiene una etiología genética. En Latinoamérica la prevalencia varía entre 
+    el 3% al 12,9% de la población. (Abarca, 2021)
+    <br>
+    En Ecuador, la discapacidad intelectual constituye el 23,35% de todos los tipos de discapacidad, según las estadísticas nacionales. (CONADIS, 2023)
+
+</MudText>
+
+@code {
+    private int selectedIndex = 0;
+    private IList<string> pi = new List<string>
+    {
+        "Imagenes/pi1.png", "Imagenes/pi2.jpg", "Imagenes/pi3.jpg", "Imagenes/pi4.jpg"
+    };
+}

@@ -1,0 +1,37 @@
+﻿@page "/cerebralP"
+
+<PageTitle>Prevalencia</PageTitle>
+<MudContainer MaxWidth="MaxWidth.ExtraExtraLarge" Class="my-container">
+
+
+    <MudText Typo="Typo.h2" Align="Align.Center" Class="my-title">
+        PREVALENCIA
+    </MudText>
+
+</MudContainer>
+<MudContainer MaxWidth="MaxWidth.Medium" Class="my-container">
+    <MudCarousel MaxWidth="ExtraLarge" ItemsSource="@qs" @bind-SelectedIndex="selectedIndex" Style="height:400px;" AutoCycle="true">
+        <ItemTemplate>
+            <div class="d-flex justify-center" style="height:100%">
+                <img src="@context" alt="Imagen del carrusel" class="carousel-image" />
+            </div>
+        </ItemTemplate>
+    </MudCarousel>
+</MudContainer>
+<MudText Typo="Typo.body1 " Align="Align.Center" Class=" my-justified-text">
+    La prevalencia de la parálisis cerebral varía globalmente entre 1.5 y 4 casos por cada 1000 nacimientos vivos, siendo la condición motora más común en la infancia. En Estados Unidos, 
+    aproximadamente 1 de cada 345 niños es diagnosticado con parálisis cerebral. En países en desarrollo, la prevalencia se estima entre 2.5 y 5 casos por cada 1000 nacimientos. (UNICEF, 2023).
+    <br>
+    La prevalencia de la parálisis cerebral en Ecuador no está documentada de manera exhaustiva en registros nacionales. Sin embargo, algunos estudios y revisiones indican que la prevalencia en 
+    Ecuador podría situarse entre 2.5 y 5 casos por cada 1000 nacimientos vivos, similar a otros países en desarrollo. Esta prevalencia es consistente con la observada en países de tercer mundo,
+    donde las tasas varían debido a diferentes factores socioeconómicos y de salud pública. (Espinoza Diaz, y otros, 2019).
+
+</MudText>
+
+@code {
+    private int selectedIndex = 0;
+    private IList<string> qs = new List<string>
+    {
+        "Imagenes/cp1.png", "Imagenes/cp2.png", "Imagenes/cp3.png", "Imagenes/cp4.png"
+    };
+}

@@ -54,7 +54,8 @@
 <MudGrid Class="mt-6">
         <MudItem xs="12" sm="7">
         <MudText Typo="Typo.h4" Align="Align.Start">
-                ENFERMEDADES QUE EXISTEN EN EL CENTRO
+            NEURODIVERGENCIA EN LA FUNDACIÓN SAN MIGUEL DE SALCEDO
+            <br>
             </MudText>
         <MudText Align="Align.Start" Class="my-justified-text">
             En el país, el 2.67% de la población tiene alguna discapacidad, según el Consejo Nacional de Discapacidades (CONADIS), hasta el 2021. Por ello, existen varios centros que ayudan a
@@ -94,7 +95,7 @@
             •	Síndrome de Down
         </MudText>
     </MudItem>
-    <MudItem xs="12" sm="5" Class="justify-left">
+    <MudItem xs="12" sm="5" Class="d-flex justify-left">
         <MudImage Src="Imagenes/ef1.png" Alt="Descripción de la imagen" />
     </MudItem>
 </MudGrid>
@@ -129,9 +130,8 @@
 @code {
     private IList<string> qs = new List<string>
     {
-        "Imagenes/qs1.jpg", "Imagenes/qs2.jpg", "Imagenes/qs3.jpg", "Imagenes/qs4.jpg"
+        "Imagenes/qs1.jpg", "Imagenes/qs3.jpg", "Imagenes/qs4.jpg"
     };
-
 
     private int selectedIndex = 0;
     private string[] images = { "Imagenes/imagen1.jpg", "Imagenes/imagen2.jpg", "Imagenes/imagen3.jpg" };

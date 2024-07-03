@@ -1,0 +1,35 @@
+﻿@page "/cerebralQ"
+
+<PageTitle>Que es</PageTitle>
+<MudContainer MaxWidth="MaxWidth.ExtraExtraLarge" Class="my-container">
+
+
+    <MudText Typo="Typo.h2" Align="Align.Center" Class="my-title">
+        ¿QUÉ  ES?
+    </MudText>
+
+</MudContainer>
+<MudContainer MaxWidth="MaxWidth.Medium" Class="my-container">
+    <MudCarousel MaxWidth="ExtraLarge" ItemsSource="@cq" @bind-SelectedIndex="selectedIndex" Style="height:400px;" AutoCycle="true" AutoCycleTime="@(TimeSpan.FromMilliseconds(8000))">
+        <ItemTemplate>
+            <div class="d-flex justify-center" style="height:100%">
+                <img src="@context" alt="Imagen del carrusel" class="carousel-image" />
+            </div>
+        </ItemTemplate>
+    </MudCarousel>
+</MudContainer>
+<MudText Typo="Typo.body1 " Align="Align.Center" Class=" my-justified-text">
+    La parálisis cerebral es un conjunto de trastornos neurológicos que aparecen en la infancia y afectan permanentemente el movimiento y la coordinación muscular. El daño al cerebro, que puede 
+    ocurrir antes, durante o después del nacimiento, es irreversible y causa discapacidades permanentes. La gravedad de estas discapacidades varía: algunas personas pueden experimentar 
+    dificultades menores, como problemas para caminar, mientras que otras pueden necesitar asistencia de por vida. Aunque no existe una cura, los tratamientos de apoyo, medicamentos y cirugías 
+    pueden mejorar las habilidades motoras y la capacidad de comunicación de los afectados. Este trastorno no es progresivo, por lo que no empeora con el tiempo. (National Institute of 
+    Neurological Disorders and Stroke. , 2021)
+</MudText>
+
+@code {
+    private int selectedIndex = 0;
+    private IList<string> cq = new List<string>
+    {
+        "Imagenes/cq1.jpeg", "Imagenes/cq2.jpeg", "Imagenes/cq3.jpeg", "Imagenes/cq4.jpeg"
+    };
+}
